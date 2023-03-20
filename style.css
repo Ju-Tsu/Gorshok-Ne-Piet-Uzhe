@@ -25,6 +25,7 @@ html {
 
 #cta_button {
   margin: 0 auto;
+  position: center;
   display: block;
   align-content: center;
   background: #ccc;
@@ -37,55 +38,45 @@ html {
   font-size: 100%;
 }
 
-.backdrop {
-  display: none;
-  position: fixed;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  transition: opacity 2s linear;
-}
-
 .modal {
-  position: fixed;
-  display: none;
-  z-index: 200;
-  top: 20%;
-  left: 30%;
-  width: 40%;
-  background: white;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-.modal__title {
+  display: none; /* Hidden by default */
+  font-family: monospace;
   text-align: center;
-  margin: 0 0 1rem 0;
+  font-size: large;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  margin:0;
+  padding: 0;
+  width: 100%; /* Full height */
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.modal__actions {
-  text-align: center;
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
 }
 
-.modal__action {
-  border: 1px solid #0e4f1f;
-  background: #0e4f1f;
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
   text-decoration: none;
-  color: white;
-  font: inherit;
-  padding: 0.5rem 1rem;
   cursor: pointer;
 }
-
-.modal__action:hover,
-.modal__action:active {
-  background: #2ddf5c;
-  border-color: #2ddf5c;
-}
-
 
